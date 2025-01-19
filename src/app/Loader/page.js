@@ -42,7 +42,7 @@ function OpeningLoader() {
 
   return (
    <>
-          <div className='OpeningLoader-Container w-screen h-screen bg-[#9c8276] flex flex-col items-center justify-center'>
+          <div className='OpeningLoader-Container w-screen h-screen bg-[#bd9c8e] flex flex-col items-center justify-center'>
            <Image src={LogoRaavya} alt="OpeningLogo-image" className='OpeningLogo-image' width={150} height={150}></Image> 
           
            <div className='Loader-container w-[25vw] sm:w-[15vw] h-[5px] bg-slate-300 rounded-xl'>

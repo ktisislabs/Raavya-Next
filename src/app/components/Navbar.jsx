@@ -8,7 +8,7 @@ function Navbar() {
     <>
 
 <nav className='Navbar-container absolute z-10 flex items-center justify-center w-screen p-0 m-0 
-      bg-[#9c8276]
+      bg-[#bd9c8e]
        '>
       
        <div className='Navbar flex items-center ml-14 gap-12 p-2'>

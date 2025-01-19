@@ -18,4 +18,23 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6; /* Light gray background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #9c8276, #3b3b3b); /* Fancy gradient */
+  border-radius: 8px;
+  border: 3px solid #f3f4f6; /* Adds a gap effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #745d4f, #1f1f1f); /* Darker gradient on hover */
 }
