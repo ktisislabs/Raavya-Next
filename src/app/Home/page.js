@@ -49,11 +49,11 @@ function Page() {
                 <h1 className="text-[#5f4124] text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium">
                   Premium Home Decor Products
                 </h1>
-                <p className="text-base sm:text-lg mt-4">
+                <p className="text-base text-[#5f4124] sm:text-lg mt-4">
                   We bring elegance and charm to your living spaces with our premium collection of
-                  handcrafted home decor products designed to inspire and elevate your lifestyle.
+                  handcrafted home decor products designed to<br></br> inspire and elevate your lifestyle.
                 </p>
-                <p className="text-sm underline hover:text-[#1f4124] cursor-pointer mt-2">
+                <p className="text-sm underline text-[#5f4124] hover:text-[#1f4124] cursor-pointer mt-2">
                   LEARN MORE
                 </p>
               </div>
@@ -79,7 +79,8 @@ function Page() {
                 </h1>
                 <p className="text-base sm:text-lg mt-4">
                   Discover The Raavya's exclusive range of premium furniture products thoughtfully
-                  designed to blend style, comfort, and functionality, creating the perfect ambiance
+            
+                  designed to blend style,<br></br>comfort, and functionality, creating the perfect ambiance
                   for your home.
                 </p>
                 <p className="text-sm underline hover:text-[#1f4124] cursor-pointer mt-2">
@@ -102,7 +103,7 @@ function Page() {
           ></video>
             <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
               <div className="text-center">
-                <h1 className="text-[#ffffff] text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium">
+                <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium">
                   Visit Our Amazon Store
                 </h1>
                 <button className="border border-white bg-transparent text-[#ffffff] p-2 text-sm rounded-xl font-medium mt-5 hover:bg-gray-200 hover:text-black">
