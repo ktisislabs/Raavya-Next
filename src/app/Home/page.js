@@ -19,15 +19,15 @@ function Page() {
             className="absolute top-0 left-0 w-full h-full object-cover z-0"
           ></video>
           <div className="absolute inset-0 flex flex-col items-center  justify-center z-10 px-4">
-            <Image src="/Mainlogo.png" alt="Raavya-Logo" width={250} height={250} />
+            <Image src="/Mainlogo.png" alt="Raavya-Logo" width={150} height={250} />
             <Image
               src="/text-logo.png"
               alt="Raavya-Logo"
-              width={300}
-              height={300}
-              className="sm:w-[200px] md:w-[300px] lg:w-[500px]"
+              width={200}
+              height={200}
+              className="sm:w-[200px] md:w-[300px] lg:w-[350px]"
             />
-            <button className="border bg-transparent text-white p-2 text-lg rounded-xl font-medium hover:bg-gray-200 hover:text-black">
+            <button className="border bg-transparent text-white p-2 text-sm rounded-xl font-medium hover:bg-gray-200 hover:text-black">
               View Products
             </button>
           </div>

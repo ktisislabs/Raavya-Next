@@ -7,7 +7,7 @@ import { IoLogoWhatsapp } from 'react-icons/io';
 
 function Footer() {
   return (
-    <footer className="w-full bg-[#bd9c8e] text-white absolute py-10 px-6">
+    <footer className="w-full bg-[#d6b0a0]  text-white absolute py-10 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         {/* Logo Section */}
         <div className="flex flex-col items-center md:items-start">
@@ -22,19 +22,19 @@ function Footer() {
 
         {/* Quick Navigation */}
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Quick Navigation</h2>
+          <h2 className="text-xl font-semibold mb-4">Quick Navigation</h2>
           <ul className="space-y-2">
-            <li className="text-lg hover:underline cursor-pointer">Home</li>
-            <li className="text-lg hover:underline cursor-pointer">About</li>
-            <li className="text-lg hover:underline cursor-pointer">Products</li>
-            <li className="text-lg hover:underline cursor-pointer">Bulk Order</li>
-            <li className="text-lg hover:underline cursor-pointer">Contact</li>
+            <li className="text-sm hover:underline cursor-pointer">Home</li>
+            <li className="text-sm hover:underline cursor-pointer">About</li>
+            <li className="text-sm hover:underline cursor-pointer">Products</li>
+            <li className="text-sm hover:underline cursor-pointer">Bulk Order</li>
+            <li className="text-sm hover:underline cursor-pointer">Contact</li>
           </ul>
         </div>
 
         {/* Address & Contact */}
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+          <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
           <p className="mb-2">
             <strong>Home Address:</strong> 552-Mandakini Enclave, Alaknanda, New Delhi - 110019
           </p>
@@ -50,28 +50,28 @@ function Footer() {
               className="hover:text-gray-200 transition-all duration-200"
               aria-label="Instagram"
             >
-              <RiInstagramFill size={24} />
+              <RiInstagramFill size={20} />
             </a>
             <a
               href="#"
               className="hover:text-gray-200 transition-all duration-200"
               aria-label="Facebook"
             >
-              <FaFacebook size={24} />
+              <FaFacebook size={20} />
             </a>
             <a
               href="#"
               className="hover:text-gray-200 transition-all duration-200"
               aria-label="LinkedIn"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={20} />
             </a>
             <a
               href="#"
               className="hover:text-gray-200 transition-all duration-200"
               aria-label="WhatsApp"
             >
-              <IoLogoWhatsapp size={24} />
+              <IoLogoWhatsapp size={20} />
             </a>
           </div>
         </div>
