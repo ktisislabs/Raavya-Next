@@ -9,6 +9,9 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { Toaster, toast } from "react-hot-toast";
+import { RiInstagramFill } from 'react-icons/ri';
+import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { IoLogoWhatsapp } from 'react-icons/io';
 
 // Fix Leaflet Marker Icons
 delete L.Icon.Default.prototype._getIconUrl;
@@ -135,8 +138,40 @@ function Page() {
           {/* Additional Section */}
           <section className="Contact-additional-section w-screen flex flex-col items-center justify-center text-center px-6 py-16 bg-transparent">
             <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">Stay Connected</h2>
-            <p className="text-white max-w-2xl">
+            <p className="text-white max-w-2xl flex flex-col items-center">
               Follow us on our social media platforms to stay updated with the latest news and offers.
+             
+                        <div className="flex justify-center md:justify-start space-x-4 mt-4">
+                          <a
+                            href="#"
+                            className="hover:text-gray-200 transition-all duration-200"
+                            aria-label="Instagram"
+                          >
+                            <RiInstagramFill size={20} />
+                          </a>
+                          <a
+                            href="#"
+                            className="hover:text-gray-200 transition-all duration-200"
+                            aria-label="Facebook"
+                          >
+                            <FaFacebook size={20} />
+                          </a>
+                          <a
+                            href="#"
+                            className="hover:text-gray-200 transition-all duration-200"
+                            aria-label="LinkedIn"
+                          >
+                            <FaLinkedin size={20} />
+                          </a>
+                          <a
+                            href="#"
+                            className="hover:text-gray-200 transition-all duration-200"
+                            aria-label="WhatsApp"
+                          >
+                            <IoLogoWhatsapp size={20} />
+                          </a>
+                        </div>
+                    
             </p>
           </section>
         </div>
