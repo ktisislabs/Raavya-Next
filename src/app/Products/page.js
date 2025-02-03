@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { HomeDecorData } from '../Data/HomeDecor';
 import { LiaFilterSolid } from 'react-icons/lia';
+import Link from 'next/link';
 
 function Page() {
   const [allProducts, setAllProducts] = useState(true);
@@ -172,9 +173,11 @@ function Page() {
                       <p className="text-gray-600 font-medium mt-4">
                         Category: <span className="text-gray-800">{product.category}</span>
                       </p>
-                      <button className="mt-4 px-4 py-2 bg-none border text-black rounded-lg hover:bg-black hover:text-white font-medium transition-colors">
-                        View Details
-                      </button>
+                      <Link href={`/Products/${String(product._id)}`}>
+  <button className="mt-4 px-4 py-2 border text-black rounded-lg hover:bg-black hover:text-white font-medium transition-colors">
+    View Details
+  </button>
+</Link>
                     </div>
                   </div>
                 ))}
