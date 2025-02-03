@@ -17,7 +17,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="Navbar-container absolute z-10 flex items-center justify-center w-screen p-2 bg-[#d6b0a0] ">
+    <nav className="Navbar-container absolute z-20 flex items-center justify-center w-screen p-2 bg-[#d6b0a0] ">
       {/* Logo and Links */}
       
 
