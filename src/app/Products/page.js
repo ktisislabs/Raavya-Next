@@ -111,12 +111,20 @@ function Page() {
                       <p className="text-gray-600 font-medium mt-4">
                         Category: <span className="text-gray-800">{product.category}</span>
                       </p>
-                      <Link href={`/Products/${String(product._id)}`}>
-  <button className="mt-4 px-4 py-2 border text-black rounded-lg hover:bg-black hover:text-white font-medium transition-colors">
-    View Details
-  </button>
-</Link>
-                    </div>
+
+                      {HomeDecorData.includes(product) ? (
+              <Link href={`/Products/HomeDecor/${String(product._id)}`}>
+                <button className="mt-4 px-4 py-2 border text-black rounded-lg hover:bg-black hover:text-white font-medium transition-colors">
+                  View Details
+                </button>
+              </Link>
+            ) : (
+              <Link href={`/Products/Furniture/${String(product._id)}`}>
+                <button className="mt-4 px-4 py-2 border text-black rounded-lg hover:bg-black hover:text-white font-medium transition-colors">
+                  View Details
+                </button>
+              </Link>
+            )}        </div>
                   </div>
                 ))}
               </>
@@ -144,7 +152,8 @@ function Page() {
                       <p className="text-gray-600 font-medium mt-4">
                         Category: <span className="text-gray-800">{product.category}</span>
                       </p>
-                      <Link href={`/Products/${String(product._id)}`}>
+
+                      <Link href={`/Products/HomeDecor/${String(product._id)}`}>
   <button className="mt-4 px-4 py-2 border text-black rounded-lg hover:bg-black hover:text-white font-medium transition-colors">
     View Details
   </button>
@@ -177,7 +186,7 @@ function Page() {
                       <p className="text-gray-600 font-medium mt-4">
                         Category: <span className="text-gray-800">{product.category}</span>
                       </p>
-                      <Link href={`/Products/${String(product._id)}`}>
+                      <Link href={`/Products/Furniture/${String(product._id)}`}>
   <button className="mt-4 px-4 py-2 border text-black rounded-lg hover:bg-black hover:text-white font-medium transition-colors">
     View Details
   </button>

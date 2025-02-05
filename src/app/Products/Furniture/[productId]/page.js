@@ -1,27 +1,29 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import {  FurnitureData } from "../../Data/Furniture";
-import { HomeDecorData } from "@/app/Data/HomeDecor";
+import {  FurnitureData } from "../../../Data/Furniture";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
 function ProductDetail() {
-  const { productId } = useParams();
+  const {productId } = useParams();
 
-  
+  console.log(productId)
 
   const [product, setProduct] = useState(null);
-
+  
+ 
   useEffect(() => {
     if (!productId) return;
 
-    // Ensure correct ID comparison and retrieve product details
-    const productDetails =[...HomeDecorData,FurnitureData].find((item) => item._id === Number(productId));
-    setProduct(productDetails);
-    console.log(productDetails);
+    const  selectedProduct =FurnitureData.find((item) => item._id === Number(productId));
+      setProduct(selectedProduct);
+    
+
+    
+    console.log(selectedProduct);
   }, [productId]);
 
   if (!product) return <div className="text-center">Product not found...</div>
