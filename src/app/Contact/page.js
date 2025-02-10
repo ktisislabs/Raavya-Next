@@ -5,13 +5,19 @@ import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useForm, ValidationError } from '@formspree/react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { Toaster, toast } from "react-hot-toast";
 import { RiInstagramFill } from 'react-icons/ri';
 import { FaAmazon, FaFacebook} from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
+import dynamic from "next/dynamic";
+
+const MapContainer = dynamic(() => import("react-leaflet").then(mod => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import("react-leaflet").then(mod => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import("react-leaflet").then(mod => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import("react-leaflet").then(mod => mod.Popup), { ssr: false });
+
 
 // Fix Leaflet Marker Icons
 delete L.Icon.Default.prototype._getIconUrl;
