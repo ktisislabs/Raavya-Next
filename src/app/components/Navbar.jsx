@@ -7,7 +7,7 @@ import MainLogo from '../../../public/text-logo.png';
 import { RiInstagramFill } from 'react-icons/ri';
 import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
-import { RxHamburgerMenu } from "react-icons/rx";
+import { FaAngleDown } from "react-icons/fa";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,9 +44,9 @@ function Navbar() {
       <div className="md:hidden ">
         <button
           onClick={toggleMenu}
-          className="focus:outline-none text-white text-2xl font-bold"
+          className="focus:outline-none text-white text-3xl font-bold"
         >
-        <RxHamburgerMenu />
+        <FaAngleDown />
         </button>
       </div>
 
@@ -140,7 +140,7 @@ function Navbar() {
                   </a>
                 </div>
                 <div className="border-t border-white mt-8 pt-4 text-center text-sm">
-        &copy; {new Date().getFullYear()} Raavya. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Raavya. All Rights Reserved.    &copy; {new Date().getFullYear()} Raavya. All Rights Reserved.
       </div>
       </div>
     </nav>

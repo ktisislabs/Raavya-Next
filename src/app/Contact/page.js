@@ -10,7 +10,7 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { Toaster, toast } from "react-hot-toast";
 import { RiInstagramFill } from 'react-icons/ri';
-import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaAmazon, FaFacebook} from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
 
 // Fix Leaflet Marker Icons
@@ -143,33 +143,33 @@ function Page() {
              
                         <div className="flex justify-center md:justify-start space-x-4 mt-4">
                           <a
-                            href="#"
+                            href="https://www.instagram.com/theraavya/"
                             className="hover:text-gray-200 transition-all duration-200"
                             aria-label="Instagram"
                           >
                             <RiInstagramFill size={20} />
                           </a>
                           <a
-                            href="#"
+                            href="http://facebook.com/theraavya"
                             className="hover:text-gray-200 transition-all duration-200"
                             aria-label="Facebook"
                           >
                             <FaFacebook size={20} />
                           </a>
                           <a
-                            href="#"
+                            href="https://www.amazon.in/stores/page/31BEBC02-A059-4270-A214-BBD72A454047"
                             className="hover:text-gray-200 transition-all duration-200"
                             aria-label="LinkedIn"
                           >
-                            <FaLinkedin size={20} />
+                            <FaAmazon size={20} />
                           </a>
-                          <a
-                            href="#"
-                            className="hover:text-gray-200 transition-all duration-200"
-                            aria-label="WhatsApp"
-                          >
-                            <IoLogoWhatsapp size={20} />
-                          </a>
+                           <a
+                                        href="https://wa.me/917701853700"
+                                        className="hover:text-gray-200 transition-all duration-200"
+                                        aria-label="WhatsApp"
+                                      >
+                                        <IoLogoWhatsapp size={20} />
+                                      </a>
                         </div>
                     
             </p>

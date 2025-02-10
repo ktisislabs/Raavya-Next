@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { FurnitureData } from '../Data/Furniture';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
@@ -8,10 +8,14 @@ import { HomeDecorData } from '../Data/HomeDecor';
 import { LiaFilterSolid } from 'react-icons/lia';
 import Link from 'next/link';
 
+import { FaArrowUp } from 'react-icons/fa';
+
+
 function Page() {
   const [allProducts, setAllProducts] = useState(true);
   const [homeDecor, setHomeDecor] = useState(false);
   const [furniture, setFurniture] = useState(false);
+  const [showGoTop, setShowGoTop] = useState(false);
 
   const handleAllProducts = () => {
     setAllProducts(true);
@@ -29,6 +33,22 @@ function Page() {
     setFurniture(true);
     setAllProducts(false);
     setHomeDecor(false);
+  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowGoTop(true);
+      } else {
+        setShowGoTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -52,7 +72,7 @@ function Page() {
         <section className="w-screen h-auto flex flex-col items-center justify-center text-center px-6 py-16 bg-transparent">
           <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">Products</h1>
           <p className="text-base md:text-lg text-white max-w-2xl">
-            We’d love to hear from you! Whether you have questions, feedback, or need assistance, feel free to get in touch with us. We’re here to help!
+          Our products are designed to enhance your lifestyle with seamless functionality, premium quality, and cutting-edge technology. Explore our range and find what fits your needs perfectly!
           </p>
         </section>
 
@@ -95,7 +115,7 @@ function Page() {
                     className="bg-white border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                   >
                     {/* Product Image */}
-                    <div className="relative w-full h-60">
+                    <div className="relative w-full h-[80vh]">
                       <Image
                         src={product.image_1}
                         alt={product.name}
@@ -136,7 +156,7 @@ function Page() {
                     className="bg-white border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                   >
                     {/* Product Image */}
-                    <div className="relative w-full h-60">
+                    <div className="relative w-full h-[80vh]">
                       <Image
                         src={product.image_1}
                         alt={product.name}
@@ -170,7 +190,7 @@ function Page() {
                     className="bg-white border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                   >
                     {/* Product Image */}
-                    <div className="relative w-full h-60">
+                    <div className="relative w-full h-[80vh]">
                       <Image
                         src={product.image_1}
                         alt={product.name}
@@ -202,12 +222,20 @@ function Page() {
         {/* Subscribe Section */}
         <section className="Contact-additional-section w-screen flex flex-col items-center justify-center text-center px-6 py-16 bg-transparent">
           <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
-            Subscribe to our NewsLetter
+            Subscribe to The Raavya : Your Home Creator
           </h2>
           <p className="text-white max-w-2xl flex flex-col items-center">
             Follow us on our social media platforms to stay updated with the latest news and offers
           </p>
         </section>
+        {showGoTop && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 bg-black text-white p-3 rounded-full shadow-md hover:bg-gray-700 transition"
+          >
+            <FaArrowUp size={20} />
+          </button>
+        )}
       </div>
 
       {/* Footer */}

@@ -2,15 +2,17 @@ import React from 'react';
 import Image from 'next/image';
 import TextLogo from '../../../public/text-logo.png';
 import { RiInstagramFill } from 'react-icons/ri';
-import { FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
+import { FaAmazon } from "react-icons/fa";
+import Link from 'next/link';
 
 function Footer() {
   return (
     <footer className="w-full bg-[#d6b0a0]  text-white absolute py-10 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         {/* Logo Section */}
-        <div className="flex flex-col items-center md:items-start">
+      <Link href={"/"}> <div className="flex flex-col items-center md:items-start">
           <Image
             src={TextLogo}
             alt="Raavya Logo"
@@ -18,17 +20,17 @@ function Footer() {
             height={300}
             className=""
           />
-        </div>
+        </div></Link> 
 
         {/* Quick Navigation */}
         <div>
           <h2 className="text-xl font-semibold mb-4">Quick Navigation</h2>
           <ul className="space-y-2">
-            <li className="text-sm hover:underline cursor-pointer">Home</li>
-            <li className="text-sm hover:underline cursor-pointer">About</li>
-            <li className="text-sm hover:underline cursor-pointer">Products</li>
-            <li className="text-sm hover:underline cursor-pointer">Bulk Order</li>
-            <li className="text-sm hover:underline cursor-pointer">Contact</li>
+         <Link href={"/Home"}>   <li className="text-sm hover:underline cursor-pointer">Home</li></Link>
+         <Link href={"/About"}> <li className="text-sm hover:underline cursor-pointer">About</li></Link>
+         <Link href={"/Products"}>   <li className="text-sm hover:underline cursor-pointer">Products</li></Link>
+         <Link href={"/BulkOrder"}>  <li className="text-sm hover:underline cursor-pointer">Bulk Order</li></Link>
+         <Link href={"/Contact"}>   <li className="text-sm hover:underline cursor-pointer">Contact</li></Link>
           </ul>
         </div>
 
@@ -46,28 +48,28 @@ function Footer() {
           </p>
           <div className="flex justify-center md:justify-start space-x-4 mt-4">
             <a
-              href="#"
+              href="https://www.instagram.com/theraavya/"
               className="hover:text-gray-200 transition-all duration-200"
               aria-label="Instagram"
             >
               <RiInstagramFill size={20} />
             </a>
             <a
-              href="#"
+              href="http://facebook.com/theraavya"
               className="hover:text-gray-200 transition-all duration-200"
               aria-label="Facebook"
             >
               <FaFacebook size={20} />
             </a>
             <a
-              href="#"
+              href="https://www.amazon.in/stores/page/31BEBC02-A059-4270-A214-BBD72A454047"
               className="hover:text-gray-200 transition-all duration-200"
               aria-label="LinkedIn"
             >
-              <FaLinkedin size={20} />
+              <FaAmazon size={20} />
             </a>
             <a
-              href="#"
+              href="https://wa.me/917701853700"
               className="hover:text-gray-200 transition-all duration-200"
               aria-label="WhatsApp"
             >
@@ -77,9 +79,13 @@ function Footer() {
         </div>
       </div>
       {/* Footer Bottom */}
-      <div className="border-t border-white mt-8 pt-4 text-center text-sm">
+      <div className="border-t border-white w-full mt-8 pt-4 text-center text-sm">
         &copy; {new Date().getFullYear()} Raavya. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Design and Developed by KtisisLabs
       </div>
+     
+        
+    
     </footer>
   );
 }

@@ -1,16 +1,28 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import Footer from '../components/Footer';
+import { useForm, ValidationError } from '@formspree/react';
+import { Toaster, toast } from "react-hot-toast";
 
 function Page() {
-  
+  const [state, handleSubmit] = useForm("xyzzbnle");
 
+
+  useEffect(() => {
+      if (state.succeeded) {
+        toast.success("Thank you for reaching out to us!", {
+          duration: 4000,
+          position: "top-center",
+        });
+      }
+    }, [state.succeeded]);
   return (
     <>
-      <div className="Contact-Page w-screen h-screen relative">
+    <Toaster/>
+      <div className="Contact-Page w-screen min-h-screen relative flex flex-col">
         {/* Fixed Background Image */}
         <div className="fixed top-0 left-0 w-full h-full -z-10">
           <Image
@@ -26,9 +38,9 @@ function Page() {
         <Navbar className="z-10" />
 
         {/* Form Section */}
-        <div className="container mx-auto px-4 py-16 relative z-0">
+        <div className="container mx-auto px-4 py-16 relative z-0 flex flex-col items-center">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 max-w-xl w-full">
             <h1 className="text-4xl font-bold text-white mb-4">Bulk Order</h1>
             <p className="text-lg text-gray-200">
               Have a bulk order or inquiry? Fill out the form below and we'll get back to you as soon as possible.
@@ -36,8 +48,8 @@ function Page() {
           </div>
 
           {/* Form */}
-          <div className="bg-gradient-to-r bg-white text-black rounded-lg shadow-xl p-8 w-full max-w-3xl mx-auto">
-            <form className="flex flex-col gap-6" >
+          <div className="bg-white text-black rounded-lg shadow-xl p-6 sm:p-8 w-full max-w-3xl mx-auto">
+            <form className="flex flex-col gap-6 w-full" onSubmit={handleSubmit}>
               {/* Name */}
               <div>
                 <label className="block font-medium mb-2" htmlFor="name">
@@ -98,9 +110,6 @@ function Page() {
                 />
               </div>
 
-             
-             
-
               {/* Submit Button */}
               <button
                 type="submit"
@@ -112,7 +121,7 @@ function Page() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

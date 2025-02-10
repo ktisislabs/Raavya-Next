@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
 function Page() {
   return (
@@ -27,9 +28,9 @@ function Page() {
               height={200}
               className="sm:w-[200px] md:w-[300px] lg:w-[350px]"
             />
-            <button className="border bg-transparent text-white p-2 text-sm rounded-xl font-medium hover:bg-gray-200 hover:text-black">
+          <Link href={'/Products'}>  <button className="border bg-transparent text-white p-2 text-sm rounded-xl font-medium hover:bg-gray-200 hover:text-black">
               View Products
-            </button>
+            </button></Link>
           </div>
         </div>
 
@@ -53,9 +54,9 @@ function Page() {
                   We bring elegance and charm to your living spaces with our premium collection of
                   handcrafted home decor products designed to<br></br> inspire and elevate your lifestyle.
                 </p>
-                <p className="text-sm underline text-[#5f4124] hover:text-[#1f4124] cursor-pointer mt-2">
+                <Link href={'/Products'}>   <p className="text-sm underline text-[#5f4124] hover:text-[#1f4124] cursor-pointer mt-2">
                   LEARN MORE
-                </p>
+                </p></Link>
               </div>
             </div>
           </div>
@@ -83,9 +84,9 @@ function Page() {
                   designed to blend style,<br></br>comfort, and functionality, creating the perfect ambiance
                   for your home.
                 </p>
-                <p className="text-sm underline hover:text-[#1f4124] cursor-pointer mt-2">
+                <Link href={'/Products'}>   <p className="text-sm underline hover:text-[#1f4124] cursor-pointer mt-2">
                   LEARN MORE
-                </p>
+                </p></Link>
               </div>
             </div>
           </div>
@@ -106,9 +107,9 @@ function Page() {
                 <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium">
                   Visit Our Amazon Store
                 </h1>
-                <button className="border border-white bg-transparent text-[#ffffff] p-2 text-sm rounded-xl font-medium mt-5 hover:bg-gray-200 hover:text-black">
+             <Link href={"https://www.amazon.in/stores/page/31BEBC02-A059-4270-A214-BBD72A454047"}>   <button className="border border-white bg-transparent text-[#ffffff] p-2 text-sm rounded-xl font-medium mt-5 hover:bg-gray-200 hover:text-black">
                   Visit Store
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>
