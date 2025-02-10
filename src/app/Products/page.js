@@ -35,6 +35,8 @@ function Page() {
     setHomeDecor(false);
   };
   useEffect(() => {
+    if (typeof window === "undefined") return; // Prevents SSR errors
+
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setShowGoTop(true);
@@ -43,14 +45,15 @@ function Page() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
-
   return (
     <>
       <div className="w-screen min-h-screen relative overflow-x-hidden overflow-y-scroll">
