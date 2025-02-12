@@ -16,6 +16,7 @@ function Page() {
             src="/HomeBg.mp4"
             loop
             controls={false}
+            playsInline
             autoPlay
             muted
             className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -99,6 +100,8 @@ function Page() {
           <video
             src="/store.mp4"
             loop
+            controls={false}
+            playsInline
             autoPlay
             muted
             className="absolute top-0 left-0 w-full h-full object-cover z-0"
