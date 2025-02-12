@@ -11,6 +11,8 @@ import Link from 'next/link';
 import { FaArrowUp } from 'react-icons/fa';
 
 
+import Head from 'next/head';
+
 function Page() {
   const [allProducts, setAllProducts] = useState(true);
   const [homeDecor, setHomeDecor] = useState(false);
@@ -56,6 +58,10 @@ function Page() {
   };
   return (
     <>
+    <Head>
+        <title>TheRaavya : Products</title>
+        <meta name="description" content="Explore our exclusive range of home decor and furniture at TheRaavya." />
+      </Head>
       <div className="w-screen min-h-screen relative overflow-x-hidden overflow-y-scroll">
         {/* Background Image */}
         <div className="fixed top-0 left-0 w-full h-full -z-10">
@@ -82,27 +88,28 @@ function Page() {
         {/* Product Filter Section */}
         <div className="p-6 bg-white">
           <h1 className="text-3xl font-regular text-gray-800 mb-6 text-center flex flex-col items-center">
-            <span className="flex items-center gap-5 my-12">
-              <LiaFilterSolid />
-              <p
-                className="text-sm border p-2 rounded-xl bg-black text-white hover:bg-white hover:text-black font-semibold cursor-pointer"
-                onClick={handleAllProducts}
-              >
-                All Products
-              </p>
-              <p
-                className="text-sm border p-2 rounded-xl bg-black text-white hover:bg-white hover:text-black font-semibold cursor-pointer"
-                onClick={handleHomeDecor}
-              >
-                Home Decor
-              </p>
-              <p
-                className="text-sm border p-2 rounded-xl bg-black text-white hover:bg-white hover:text-black font-semibold cursor-pointer"
-                onClick={handleFurniture}
-              >
-                Furniture
-              </p>
-            </span>
+          <span className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 my-6 sm:my-12">
+  <LiaFilterSolid className="text-xl sm:text-2xl" />
+  <p
+    className="text-xs sm:text-sm border p-2 sm:p-3 rounded-xl bg-black text-white hover:bg-white hover:text-black font-semibold cursor-pointer transition-all"
+    onClick={handleAllProducts}
+  >
+    All Products
+  </p>
+  <p
+    className="text-xs sm:text-sm border p-2 sm:p-3 rounded-xl bg-black text-white hover:bg-white hover:text-black font-semibold cursor-pointer transition-all"
+    onClick={handleHomeDecor}
+  >
+    Home Decor
+  </p>
+  <p
+    className="text-xs sm:text-sm border p-2 sm:p-3 rounded-xl bg-black text-white hover:bg-white hover:text-black font-semibold cursor-pointer transition-all"
+    onClick={handleFurniture}
+  >
+    Furniture
+  </p>
+</span>
+
          
             {homeDecor && <span>Checkout our Home Decor Products</span>}
             {furniture && <span>Checkout our Furniture Products</span>}
@@ -234,7 +241,7 @@ function Page() {
         {showGoTop && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 bg-black text-white p-3 rounded-full shadow-md hover:bg-gray-700 transition"
+            className="fixed bottom-8 right-8 bg-[#6d3210] text-white p-3 rounded-full shadow-md hover:bg-gray-700 transition"
           >
             <FaArrowUp size={20} />
           </button>

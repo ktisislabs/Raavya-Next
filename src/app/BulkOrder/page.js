@@ -6,6 +6,10 @@ import Image from 'next/image';
 import Footer from '../components/Footer';
 import { useForm, ValidationError } from '@formspree/react';
 import { Toaster, toast } from "react-hot-toast";
+import Head from 'next/head';
+
+
+
 
 function Page() {
   const [state, handleSubmit] = useForm("xyzzbnle");
@@ -21,6 +25,10 @@ function Page() {
     }, [state.succeeded]);
   return (
     <>
+    <Head>
+        <title>TheRaavya : Bulk Order</title>
+        <meta name="description" content="Explore our exclusive range of home decor and furniture at TheRaavya." />
+      </Head>
     <Toaster/>
       <div className="Contact-Page w-screen min-h-screen relative flex flex-col">
         {/* Fixed Background Image */}

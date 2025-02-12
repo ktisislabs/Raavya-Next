@@ -10,6 +10,11 @@ import { RiInstagramFill } from 'react-icons/ri';
 import { FaAmazon, FaFacebook } from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
 
+
+
+import Head from 'next/head';
+
+
 function Page() {
   const [state, handleSubmit] = useForm("mwppwrwy");
 
@@ -24,6 +29,10 @@ function Page() {
 
   return (
     <>
+    <Head>
+        <title>TheRaavya : Contact Us</title>
+        <meta name="description" content="Explore our exclusive range of home decor and furniture at TheRaavya." />
+      </Head>
       <Toaster />
       <div className="Contact-Page w-screen h-screen relative">
         <div className="fixed top-0 left-0 w-full h-full -z-10">

@@ -4,6 +4,15 @@ import Image from 'next/image';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 
+
+
+export const metadata={
+  title: "TheRaavya : Your Home Creator | Home",
+  description: "Explore TheRaavya's exclusive home decor and furniture collection. Elevate your living space with quality and elegance.",
+  keywords: "home decor, furniture, interior design, modern furniture, TheRaavya",
+}
+
+
 function Page() {
   return (
     <>

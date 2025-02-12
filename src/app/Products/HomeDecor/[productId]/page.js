@@ -9,8 +9,8 @@ import Footer from "@/app/components/Footer";
 
 function ProductDetail() {
   const { productId } = useParams();
-
-  console.log(productId);
+const phoneNumber = "917710853700"
+ 
 
   const [product, setProduct] = useState(null);
 
@@ -71,9 +71,30 @@ function ProductDetail() {
             <p className="text-sm text-gray-600 text-center lg:text-left">Category: {product.category}</p>
 
             {/* Enquire button */}
-            <button className="bg-yellow-700 text-white py-3 px-8 rounded-lg hover:bg-yellow-400 transition-colors duration-300 w-full sm:w-auto text-lg">
-              Enquire
-            </button>
+            <div className="flex flex-wrap items-center justify-start gap-4 sm:gap-10 w-full text-center">
+  <a 
+    href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Hello, I'm interested to enquire about ${product.name}`)}`} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="w-full sm:w-auto"
+  >
+    <button className="bg-yellow-700 text-white py-3 px-8 rounded-lg hover:bg-yellow-400 transition-colors duration-300 w-full sm:w-auto text-lg">
+      Enquire
+    </button>
+  </a>
+  
+  <a 
+    href={product.amazonLink}
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="w-full sm:w-auto"
+  >
+    <button className="bg-yellow-700 text-white py-3 px-8 rounded-lg hover:bg-yellow-400 transition-colors duration-300 w-full sm:w-auto text-lg">
+      Buy On Amazon
+    </button>
+  </a>
+</div>
+
           </div>
         </div>
       </div>

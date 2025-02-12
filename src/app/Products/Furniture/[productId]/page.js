@@ -10,7 +10,8 @@ import Footer from "@/app/components/Footer";
 function ProductDetail() {
   const { productId } = useParams();
 
-  console.log(productId);
+  const phoneNumber = "917710853700"
+ 
 
   const [product, setProduct] = useState(null);
 
@@ -71,9 +72,13 @@ function ProductDetail() {
             <p className="text-sm text-gray-600 text-center lg:text-left">Category: {product.category}</p>
 
             {/* Enquire button */}
-            <button className="bg-yellow-700 text-white py-3 px-8 rounded-lg hover:bg-yellow-400 transition-colors duration-300 w-full sm:w-auto text-lg">
+            <a 
+  href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(`Hello, I'm interested to enquire about ${product.name}`)}`} 
+  target="_blank" 
+  rel="noopener noreferrer"
+>  <button className="bg-yellow-700 text-white py-3 px-8 rounded-lg hover:bg-yellow-400 transition-colors duration-300 w-full sm:w-auto text-lg">
               Enquire
-            </button>
+            </button></a>
           </div>
         </div>
       </div>
