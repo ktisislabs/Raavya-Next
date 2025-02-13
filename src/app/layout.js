@@ -35,11 +35,7 @@ export default function RootLayout({ children }) {
     <meta name="description" content="Transform your home with The Raavya's curated home decor and furniture collection. Quality and elegance for every space." />
     
     
-    <meta property="og:title" content="The Raavya: Your Home Creator" />
-    <meta property="og:description" content="Explore our premium home decor and furniture collection. Elevate your living space with The Raavya." />
-    <meta property="og:image" content="/Mainlogo.png" />
-    <meta property="og:url" content="https://theraavya.in" />
-    <meta property="og:type" content="website" />
+    
 
     <link rel="canonical" href="https://theraavya.in" />
 </head>
