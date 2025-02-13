@@ -38,10 +38,10 @@ function Footer() {
         <div>
           <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
           <p className="mb-2">
-            <strong>Home Address:</strong> 552-Mandakini Enclave, Alaknanda, New Delhi - 110019
+            <strong>Registered Address:</strong> 552-Mandakini Enclave, Alaknanda, New Delhi - 110019
           </p>
           <p className="mb-2">
-            <strong>Office Address:</strong> C-23, Sector 6, Noida, Uttar Pradesh - 201301
+            <strong>Factory Address:</strong> C-23, Sector 6, Noida, Uttar Pradesh-  201301
           </p>
           <p className="mb-2">
             <strong>Phone:</strong> +91 7701853700
